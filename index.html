@@ -4,17 +4,171 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ficha Personal</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="index.css" />
   </head>
   <body>
-    <header>
-      <h1>Ficha Personal</h1>
+    <header class="header">
+      <h1 class="header__title">Ficha Personal</h1>
+
+      <!-- Botón para cambiar tema (Modo Oscuro/Claro) -->
+      <button
+        class="theme-toggle"
+        id="theme-toggle-btn"
+        aria-label="Cambiar tema"
+      >
+        <!-- Ícono de Luna (Modo Claro) -->
+        <svg
+          class="icon-moon"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21c3.08 0 5.8-1.42 7.652-3.698l.001-.001z"
+          />
+        </svg>
+        <!-- Ícono de Sol (Modo Oscuro) -->
+        <svg
+          class="icon-sun"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-6.364-.386l1.591-1.591M3 12H.75m.386-6.364l1.591 1.591M12 5.25A6.75 6.75 0 005.25 12a6.75 6.75 0 006.75 6.75 6.75 6.75 0 006.75-6.75A6.75 6.75 0 0012 5.25z"
+          />
+        </svg>
+      </button>
     </header>
 
-    <body></body>
+    <main class="main-container">
+      <!-- --- Sección de Perfil --- -->
+      <section class="profile-section">
+        <!-- Reemplaza con tu foto -->
+        <div class="profile__image"></div>
+        <h2 class="profile__name">Federico Nahuel Soricetti</h2>
+      </section>
 
-    <footer>
-      <p>Todos los derechos reservados © 2025</p>
-    </footer>
+      <!-- --- Rejilla de Información --- -->
+      <section class="info-grid">
+        <div class="info-card">
+          <div class="info-card__label">Nombre Completo</div>
+          <div class="info-card__value">Federico Nahuel Soricetti</div>
+        </div>
+        <div class="info-card">
+          <div class="info-card__label">Nro de Legajo</div>
+          <div class="info-card__value">1222758</div>
+        </div>
+        <div class="info-card">
+          <div class="info-card__label">Materia</div>
+          <div class="info-card__value">Diseño y desarrollo Web</div>
+        </div>
+        <div class="info-card">
+          <div class="info-card__label">Curso</div>
+          <div class="info-card__value">536117</div>
+        </div>
+      </section>
+
+      <!-- --- Rejilla de Proyectos --- -->
+      <section class="projects-grid">
+        <!-- Proyecto 1: Fan Page -->
+        <article class="project-card">
+          <img
+            src="Imagenes/SoriAkatsuki.png"
+            alt="Vista previa de Fan Page"
+            class="project-card__image"
+          />
+          <div class="project-card__content">
+            <h3 class="project-card__title">Fan page - Naruto</h3>
+            <div class="project-card__links">
+              <a
+                href="https://github.com/fedesorii/DyDW-NarutoFanPage.git"
+                target="_blank"
+                class="project-card__link"
+                >Repositorio</a
+              >
+              <a
+                href="https://fedesorii.github.io/DyDW-NarutoFanPage/"
+                target="_blank"
+                class="project-card__link"
+                >Ver Página</a
+              >
+            </div>
+          </div>
+        </article>
+
+        <!-- Proyecto 2: Local Comercial -->
+        <article class="project-card">
+          <!-- Reemplaza con la imagen de tu proyecto -->
+          <img
+            src="Imagenes/Logo-UrbanStyle.png"
+            alt="Vista previa de Local Comercial"
+            class="project-card__image"
+          />
+          <div class="project-card__content">
+            <h3 class="project-card__title">Local comercial - Urban Style</h3>
+            <div class="project-card__links">
+              <a
+                href="https://github.com/fedesorii/DyDW-TpUrbanStyle.git"
+                target="_blank"
+                class="project-card__link"
+                >Repositorio</a
+              >
+              <a
+                href="https://fedesorii.github.io/DyDW-TpUrbanStyle/"
+                target="_blank"
+                class="project-card__link"
+                >Ver Página</a
+              >
+            </div>
+          </div>
+        </article>
+
+        <!-- Proyecto 3: Centro Comercial -->
+        <article class="project-card">
+          <!-- Reemplaza con la imagen de tu proyecto -->
+          <img
+            src="https://placehold.co/600x400/777777/FFFFFF?text=Centro+Comercial"
+            alt="Vista previa de Centro Comercial"
+            class="project-card__image"
+          />
+          <div class="project-card__content">
+            <h3 class="project-card__title">Centro comercial - Lil Abasto</h3>
+            <div class="project-card__links">
+              <a
+                href="https://github.com/fedesorii/DyDW-TpLilAbasto.git"
+                target="_blank"
+                class="project-card__link"
+                >Repositorio</a
+              >
+              <a
+                href="https://fedesorii.github.io/DyDW-TpLilAbasto/"
+                target="_blank"
+                class="project-card__link"
+                >Ver Página</a
+              >
+            </div>
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <footer class="footer">© 2025 Todos los derechos reservados</footer>
 
     <script src="index.js"></script>
   </body>
